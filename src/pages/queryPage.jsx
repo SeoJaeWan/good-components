@@ -15,17 +15,6 @@ const Children = () => {
   );
 };
 
-export const OtherSession = () => {
-  const queryClient = useQueryClient();
-  const data = queryClient.getQueryData(["dummy"]);
-
-  console.log("###### OTHER ######");
-  console.log(data);
-  console.log(data);
-
-  return <></>;
-};
-
 const dummyQuery = () => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {

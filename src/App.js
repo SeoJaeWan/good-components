@@ -1,7 +1,7 @@
 import { useState } from "react";
 import FunnelPage from "./pages/funnelPage";
 import PropsPage from "./pages/propsPage";
-import QueryPage, { OtherSession } from "./pages/queryPage";
+import QueryPage from "./pages/queryPage";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 const queryClient = new QueryClient();
@@ -27,7 +27,6 @@ function App() {
         {state === "query" && (
           <QueryClientProvider client={queryClient}>
             <QueryPage />
-            <OtherSession />
           </QueryClientProvider>
         )}
         {state === "funnel" && <FunnelPage />}
